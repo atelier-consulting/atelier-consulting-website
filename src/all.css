@@ -1,0 +1,89 @@
+@font-face {
+  font-family: LabGrotesque;
+  src: url("f/LabGrotesque-Regular.woff2");
+  font-weight: 400;
+}
+@font-face {
+  font-family: LabGrotesque;
+  src: url("f/LabGrotesque-Black.woff2");
+  font-weight: 900;
+}
+html {
+  font-size: 20px;
+  font-family: LabGrotesque,BlinkMacSystemFont,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+}
+body {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin: 0;
+}
+@media (prefers-color-scheme: dark) {
+  body {
+    background: #4a4a4a;
+    color: #d6d6d6;
+  }
+}
+:root {
+  --h: .8rem; /* page-spacing-horizontal */
+  --v: 2rem; /* section-spacing-vertical */
+  --w: 100%; /* section-width */
+  --p: 1rem; /* paragraph-spacing-vertical */
+  --s: .8rem; /* font-size-small */
+  --l: 1.6rem; /* font-size-large */
+}
+@media (min-width: 375px) {
+  :root {
+    --h: 1rem;
+  }
+}
+@media (min-width: 768px) {
+  :root {
+    --w: 27.5rem;
+  }
+}
+header, main, section {
+  margin: 0 auto;
+  max-width: var(--w);
+  padding-left: var(--h);
+  padding-right: var(--h);
+}
+header {
+  padding-top: .8rem;
+  font-size: var(--s);
+  font-weight: 900;
+}
+main, section {
+  padding-top: var(--v);
+}
+section:last-child {
+  padding-bottom: 35vh;
+}
+h1, h2, h3, p {
+  margin: 0;
+}
+h1, h2 {
+  font-size: var(--l);
+  font-weight: 900;
+  letter-spacing: -0.005em;
+  line-height: 1.3;
+  padding-bottom: 1rem;
+}
+h3 {
+  font-size: var(--s);
+  opacity: .42;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+p + p, article + article {
+  padding-top: var(--p);
+}
+a[href^="mailto"],
+a[href^="mailto"]:active,
+a[href^="mailto"]:visited {
+  color: inherit;
+  text-decoration: none;
+}
+em {
+  font-style: normal;
+  text-decoration: underline;
+}
