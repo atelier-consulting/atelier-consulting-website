@@ -82,6 +82,11 @@
     --f: 40px;
   }
 }
+@media (min-width: 2400px) {
+  :root {
+    --f: 50px;
+  }
+}
 html {
   font-size: var(--f);
   font-family: LabGrotesque,BlinkMacSystemFont,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
