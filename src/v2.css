@@ -1,0 +1,234 @@
+@font-face {
+  font-family: LabGrotesque;
+  src: url("f/LabGrotesque-Thin.woff2");
+  font-weight: 100;
+}
+@font-face {
+  font-family: LabGrotesque;
+  src: url("f/LabGrotesque-Light.woff2");
+  font-weight: 300;
+}
+@font-face {
+  font-family: LabGrotesque;
+  src: url("f/LabGrotesque-Regular.woff2");
+  font-weight: 400;
+}
+@font-face {
+  font-family: LabGrotesque;
+  src: url("f/LabGrotesque-Black.woff2");
+  font-weight: 900;
+}
+:root {
+  --v: 1rem; /* section-spacing-vertical */
+  --h: .8rem; /* page-spacing-horizontal */
+  --f: 20px; /* font-size-base */
+  --l: 1.25rem; /* font-size-large */
+  --t: 400; /* font-weight */
+  --s: 1rem; /* font-size-small */
+  --i: 1.6; /* line-height-text */
+  --j: 1.44; /* line-height-heading */
+  --o: .575; /* opacity */
+  --w: 100%; /* max-width-heading */
+  --w: 100%; /* max-width-paragraph */
+}
+
+html {
+  font-size: var(--f);
+  font-family: LabGrotesque,BlinkMacSystemFont,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+}
+body {
+  font-size: 1rem;
+  font-weight: var(--t);
+  line-height: var(--i);
+  margin: 0;
+  padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
+}
+
+header, section {
+  padding-left: var(--h);
+  padding-right: var(--h);
+}
+header {
+  padding-top: .75rem;
+  opacity: var(--o);
+}
+header > button {
+  position: fixed;
+  z-index: 1;
+  top: var(--v);
+  right: calc(var(--h) / 2);
+  font-size: calc(var(--s) * .75);
+  border: 0;
+  background: none;
+  max-width: 7.5em;
+  text-align: left;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+button > em {
+  display: none;
+}
+.h header {
+  opacity: 1;
+}
+section {
+  padding-top: var(--v);
+}
+body:not(.h) section {
+  padding-bottom: calc(var(--v) * 2);
+}
+section:nth-child(-n+3) > h2 {
+  text-indent: -.05em;
+}
+
+h1, h2, h3, p {
+  margin: 0;
+}
+h1 {
+  font-size: var(--s);
+  font-weight: 900;
+}
+h2 {
+  font-size: var(--l);
+  font-weight: 900;
+  line-height: var(--j);
+  letter-spacing: -0.01em;
+}
+body:not(.h) h2 {
+  padding-bottom: var(--v);
+  max-width: var(--w);
+}
+h3 {
+  font-size: 1rem;
+  font-weight: var(--t);
+}
+em {
+  font-weight: var(--t);
+  font-style: normal;
+  opacity: var(--o);
+}
+.h em {
+  display: none;
+}
+body:not(.h) p {
+  max-width: var(--p);
+}
+body:not(.h) p + p,
+body:not(.h) article + article {
+  padding-top: var(--v);
+}
+article > p {
+  opacity: var(--o);
+}
+.h article > p {
+  display: none;
+}
+.h article, .h article > h3 {
+  display: inline;
+}
+.h > section:first-of-type > p {
+  display: inline;
+}
+a[href^="mailto:"],
+a[href^="mailto:"]:active,
+a[href^="mailto:"]:visited {
+  display: block;
+  padding-bottom: 15vh;
+  color: inherit;
+  text-decoration: none;
+}
+a, a[href^="mailto:"] > span {
+  font-style: normal;
+  color: inherit;
+  text-decoration: underline;
+  transition: opacity .3s ease-out;
+}
+a[href^="mailto:"]:hover > span {
+  opacity: var(--o);
+}
+
+@media (min-width: 360px) {
+  :root {
+    --f: 22px;
+  }
+}
+@media (min-width: 375px) {
+  :root {
+    --f: 23px;
+  }
+}
+@media (min-width: 410px) {
+  :root {
+    --f: 26px;
+  }
+}
+@media (min-width: 568px) and (orientation: landscape) {
+  :root {
+    --f: 20px;
+  }
+}
+@media (min-width: 640px) and (orientation: landscape) {
+  :root {
+    --f: 23px;
+  }
+}
+@media (min-width: 667px) and (orientation: landscape) {
+  :root {
+    --f: 24px;
+    --w: 68%;
+  }
+}
+@media (min-width: 768px) {
+  :root {
+    --h: 1.1rem;
+    --f: 27px;
+    --l: 1.38rem;
+    --j: 1.33;
+    --w: 77%;
+  }
+}
+@media (min-width: 1024px) {
+  :root {
+    --h: 1.5rem;
+    --f: 35px;
+    --l: 1.35rem;
+    --s: 0.8rem;
+    --j: 1.33;
+    --w: 77%;
+  }
+}
+@media (min-width: 1024px) and (orientation: portrait) {
+  :root {
+    --f: 36px;
+    --l: 1.33rem;
+    --w: 79%;
+  }
+}
+@media (min-width: 1366px) {
+  :root {
+    --f: 42px;
+    --h: 1.4rem;
+    --l: 1.45rem;
+    --s: .75rem;
+    --w: 75%;
+    --p: 88%;
+  }
+  button > em {
+    display: inline;
+  }
+}
+@media (min-width: 1440px) {
+  :root {
+    --f: 45px;
+    --l: 1.25rem;
+    --s: .5rem;
+    --t: 300;
+    --w: 67%;
+  }
+}
+@media (prefers-color-scheme: dark) {
+  body {
+    background: #171717;
+    color: #bebebe;
+  }
+}

@@ -27,7 +27,9 @@
 }
 @media (min-width: 375px) {
   :root {
-    --h: 1rem;
+    --f: 25px;
+    --l: 1.28rem;
+    --v: 2.25rem;
   }
 }
 @media (min-width: 768px) {
@@ -110,6 +112,7 @@ header {
 }
 main, section {
   padding-top: var(--v);
+  padding-bottom: var(--v);
 }
 section:last-child {
   padding-bottom: 27.5vh;
