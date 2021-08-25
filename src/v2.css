@@ -194,7 +194,7 @@ a[href^="mailto:"]:hover > span {
 @media (min-width: 1024px) {
   :root {
     --h: 1.5rem;
-    --v: 1.25rem;
+    --v: 1.15rem;
     --f: 35px;
     --l: 1.33rem;
     --s: 0.8rem;
