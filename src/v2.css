@@ -250,4 +250,7 @@ a[href^="mailto:"]:hover > span {
     background: #171717;
     color: #bebebe;
   }
+  header > button {
+    color: #bebebe;
+  }
 }
