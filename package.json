@@ -1,20 +1,17 @@
 {
   "name": "atelier-consulting",
-  "version": "0.1.0",
-  "main": "src/index.html",
-  "repository": "git@gitlab.com:atelier/atelier-consulting.git",
-  "author": "Serge Tymoshenko <sergiy.tymoshenko@icloud.com>",
+  "version": "2.0.0",
+  "repository": "git@gitlab.com:atelier-consulting/atelier-consulting-website.git",
+  "author": "Serge Tymoshenko <serge@tymo.com>",
   "license": "UNLICENSED",
   "scripts": {
-    "dev": "parcel src/index.html --out-dir dev --open",
-    "build": "parcel build src/index.html --public-url . --no-source-maps --no-content-hash --no-cache && rm dist/*.css",
-    "deploy": "yarn build && node deploy"
+    "dev": "parcel src/index.html --dist-dir dev",
+    "prod": "parcel build src/index.html --dist-dir prod --public-url . --no-source-maps --no-content-hash --no-cache",
+    "deploy": "yarn prod && node deploy"
   },
   "devDependencies": {
     "dotenv": "^8.2.0",
     "ftp-deploy": "^2.3.6",
-    "parcel-bundler": "^1.12.4",
-    "parcel-plugin-inliner": "^1.0.10"
-  },
-  "dependencies": {}
+    "parcel": "^2.6.2"
+  }
 }
