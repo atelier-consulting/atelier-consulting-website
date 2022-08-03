@@ -88,6 +88,7 @@ h1, h2, h3, p {
 h1 {
   font-size: var(--s);
   font-weight: 900;
+  cursor: pointer;
 }
 h2 {
   font-size: var(--l);
