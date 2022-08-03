@@ -232,6 +232,7 @@ a[href^="mailto:"]:hover > span {
     --v: 1.15rem;
     --f: 52px;
     --i: 1.44;
+    --w: 22.25rem;
   }
 }
 @media (min-width: 3200px) {
