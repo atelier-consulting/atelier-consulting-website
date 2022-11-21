@@ -18,7 +18,7 @@ if (process.env.FTP_USER && process.env.FTP_PASS && process.env.FTP_HOST) {
     password: process.env.FTP_PASS,
     host: process.env.FTP_HOST,
     port: 21,
-    localRoot: path.join(__dirname, "dist"),
+    localRoot: path.join(__dirname, "prod"),
     remoteRoot: '/',
     include: ['*.html', '*.woff2'],
     deleteRemote: false,
